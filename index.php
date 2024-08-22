@@ -201,7 +201,7 @@
               alert("Error: " + json.message);
               return false;
             } else {
-              $("#student_table").DataTable().row("[id='" + id + "']").remove().draw();
+              $("#" + id).closest('tr').remove()
             }
           }
         });
