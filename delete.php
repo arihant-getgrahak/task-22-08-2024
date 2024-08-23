@@ -15,4 +15,5 @@ if ($conn->query($sql) === TRUE) {
         'status' => false,
         "message" => "Error deleting record: . '$conn->error'"
     );
+    echo json_encode($data);
 }

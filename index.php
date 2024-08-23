@@ -200,9 +200,9 @@
             if (!status) {
               alert("Error: " + json.message);
               return false;
-            } else {
-              $("#" + id).closest('tr').remove()
             }
+            $("#" + id).closest('tr').remove()
+            $("#student_table").DataTable().ajax.reload();
           }
         });
       }
